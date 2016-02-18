@@ -1,0 +1,11 @@
+<div id="todo">
+<h3>Todo List</h3>
+<ul id = "todo_list">
+  <% if @todos %>
+    <% @todos.each do |todo| %>
+      <%= erb :_todo, layout: false, locals: { todo: todo} %>
+    <% end %>
+  <% end %>
+</ul>
+<a id="create_link"  href="/tasks/new">Create a new Task</a>
+</div>
